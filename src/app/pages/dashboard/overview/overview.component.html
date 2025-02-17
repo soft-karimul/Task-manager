@@ -3,37 +3,81 @@
     <div class="top-section">
     <div class="completed-task">
         <div >
-            <p>Total Completed task<i style="font-size: 20px;margin: auto 10px;" class='bx bx-donate-blood'></i></p>  
+            <p>Total Completed task  </p>
+            <span>34</span>
         </div>
-        <span>34</span>
+        <i style="margin: auto 10px;" class='bx bx-donate-blood'></i>  
     </div>
-    <div class="pending-task">
+    <div class="completed-task">
         <div >
-            <p>Total Completed task<i style="font-size: 20px;margin: auto 10px;" class='bx bx-donate-blood'></i></p>  
+            <p>Total Completed task  </p>
+            <span>34</span>
         </div>
-        <span>34</span>
+        <i style="margin: auto 10px;" class='bx bx-donate-blood'></i>  
     </div>
-    <div class="dued-task">
+    <div class="completed-task">
         <div >
-            <p>Total Completed task<i style="font-size: 20px;margin: auto 10px;" class='bx bx-donate-blood'></i></p>  
+            <p>Total Completed task  </p>
+            <span>34</span>
         </div>
-        <span>34</span>
+        <i style="margin: auto 10px;" class='bx bx-donate-blood'></i>  
     </div>
+    <div class="completed-task">
+        <div >
+            <p>Total Completed task  </p>
+            <span>34</span>
+        </div>
+        <i style="margin: auto 10px;" class='bx bx-donate-blood'></i>  
+    </div>
+
+ 
+
+
+
+ 
     </div>
 
     <div class="chart-cont">
-        <div class="top-header">
-            <h3>See task report</h3>
-        </div>
-        <div class="chart">
+        <div class="chart-cont-left">
+            <div class="top-header">
+                <div>
+                    <h3>See task report</h3>
+                </div>
+               
+                <div class="option">
+                    <label for="">Select</label>
+                    <select (change)="taskAction($event)"  class="status" name="" id="">
+                      <option value="">Action</option>
+                      <option value="edit">Edit</option>
+                      <option value="delete">Delete</option>
+                    </select>
+                  </div>
+            </div>
             <div class="chart-left">
                 <canvas #canvas1></canvas>
+            </div>
+        </div>
+        <div class="chart-cont-right">
+            <div class="top-header">
+                <div>
+                    <h3>See task report</h3>
+                </div>
+               
+                <div class="option">
+                    <label for="">Select</label>
+                    <select (change)="taskAction($event)"  class="status" name="" id="">
+                      <option value="">Action</option>
+                      <option value="edit">Edit</option>
+                      <option value="delete">Delete</option>
+                    </select>
+                  </div>
             </div>
             <div class="chart-right">
                 <canvas #canvas2></canvas>
             </div>
-            
         </div>
+   
+    
 
  
 

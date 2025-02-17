@@ -31,12 +31,12 @@ export const routes: Routes = [
     component: SignupComponent,
   },
   {
-    path: 'dashboard',
+    path: '',
     component: DashboardComponent,
     canActivate:[authGuard],
     children: [
       {
-        path: 'overview',
+        path: 'dashboard',
         component: OverviewComponent,
       },
       {

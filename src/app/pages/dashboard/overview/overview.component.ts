@@ -14,6 +14,9 @@ export class OverviewComponent {
   canvas2 = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas2');
 
 
+  taskAction(event:Event){
+
+  }
 
   
   ngAfterViewInit(){

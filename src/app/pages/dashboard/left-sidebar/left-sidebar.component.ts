@@ -36,8 +36,7 @@ export class LeftSidebarComponent implements OnInit {
 
   items = [
     {
-
-      routerLink: 'overview',
+      routerLink: 'dashboard',
       label: 'dashboard',
       icon: 'bx bxs-dashboard',
       isActive:true
