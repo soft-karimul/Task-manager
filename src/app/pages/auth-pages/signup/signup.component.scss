@@ -1,0 +1,62 @@
+@use '../../../../assets/styles/base/color' as colors;
+@use '../../../../assets/styles/base/typography' as type;
+
+.signup-cont {
+    width: 100%;
+    height:auto;
+    background-color:colors.$bg-neutral-primary-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .signup {
+        width: 25vw;
+        height:auto;
+        background-color: colors.$bg-primary-light;
+        border-radius: 5px;
+        padding:50px 15px;
+        margin: 15% auto;
+        h1{
+            text-align: center;
+            margin:20px auto;
+        }
+        .form-group{
+            width:100%;
+            margin:10px auto;
+          
+            label {
+                color: colors.$text-color-primary-light;
+                display:block;
+            }
+            input {
+                background-color: colors.$input-subface-light;
+                border: 1px solid colors.$input-border-light;
+                padding:15px 10px;
+                width: 100%;
+                margin: 5px auto;
+                border-radius: 5px;
+                font-size:type.$font-size-default;
+                font-weight: type.$font-weight-medium;
+                 color: colors.$text-color-tertiary-dark;
+            }
+            input[type=submit] {
+                margin: 15px auto;
+                font-weight: type.$font-weight-semibold;
+                cursor: pointer;
+            }
+            input:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+@media (max-width:768px){
+    .signup-cont{
+        .signup {
+            width:100%;
+          }
+    }
+  
+}
+

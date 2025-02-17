@@ -1,0 +1,37 @@
+<header>
+        <div class="logo-cont">
+            <a routerLink="/"> <img width="100" class="logo" src="images/main-logo.png"  alt="lgo"></a>
+        </div>
+       
+        <div class="nav-cont-big">
+            <nav class="nav">
+                <ul>
+                    <li><a routerLink="/">Home</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    
+        <div class="btn-cont">
+            <i (click)="collapseMobileNav()" class='bx bx-menu'></i>
+        </div>
+       
+    
+</header>
+
+
+<div class="nav-cont-sm" [class]="collapseNav ? 'show-sm-nav' : 'hide-sm-nav' ">
+    <nav class="nav">
+        <ul>
+            <li><a routerLink="/">Home</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+</div>

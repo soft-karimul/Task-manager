@@ -1,0 +1,69 @@
+<div class="modal-container">
+    <div class="header">
+        <i class='bx bx-x' (click)="close.emit()"></i>
+    </div>
+    <div class="content">
+        <form #taskForm="ngForm">
+            <div class="form-group">
+                <input placeholder="Title" class="title" name="title" required="required" [(ngModel)]="title" type="text" #titleV="ngModel" name="title">
+                <div *ngIf="titleV.invalid && (titleV.dirty || titleV.touched)" >
+                    <span *ngIf="titleV.hasError('required')" class="alert">
+                      Title is required !
+                    </span>
+                 </div>
+            </div>
+        
+            <div class="form-group">
+                <textarea placeholder="Description" name="description" class="description" required="required" [(ngModel)]="description" rows="6" #descriptionV="ngModel" type="text" name="description"></textarea>
+               <div *ngIf="descriptionV.invalid && (descriptionV.dirty || descriptionV.touched)" >
+                  <span *ngIf="descriptionV.hasError('required')" class="alert">
+                    Description is required !
+                  </span>
+               </div>
+            </div>
+    
+            
+    
+            <div class="select-date">
+                <div class="start-date">
+                    <label for="appt">Select start date*</label>
+                    <input type="datetime-local" name="start_date" [(ngModel)]="start_date" id="appt"  placeholder="hh/mm/ss" name="appt">
+                </div>
+                <div class="end-date">
+                    <label for="appt">Select end date*</label>
+                    <input type="datetime-local" id="appt" name="end_date" required [(ngModel)]="end_date"   name="appt">
+                </div>
+            </div>
+        
+            
+                <div class="select-group" >
+                    <label for="appt">Select preference*</label>
+                    <select name="priority" id=""  required [(ngModel)]="priority">
+                        <option value="high">High</option>
+                        <option  value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+    
+                <div class="select-group">
+                    <label for="appt">Select remainder*</label>
+                    <select name="remainder" required id="" [(ngModel)]="remainder">
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                    </select>
+                </div>
+        </form>
+       
+    </div>
+
+
+    <div class="footer">
+        @if(formStatus()){
+            <button class="submit" (click)="updateForm()">Update</button>
+        }@else {
+            <button class="submit" (click)="submitForm()">Submit</button>
+        }
+        <button class="cancle" (click)="close.emit()">Cancle</button>
+    </div>
+
+</div>

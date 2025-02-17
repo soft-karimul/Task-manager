@@ -1,0 +1,48 @@
+@use '../../../../assets/styles/base/color' as colors;
+@use '../../../../assets/styles/base/typography' as type;
+
+.hero{
+    width: 100%;
+    height:calc(100vh - 60px);
+    background-color:colors.$bg-neutral-primary-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    > div {
+        width: fit-content;
+        padding: 10px;
+        text-align: center;
+    }
+    h1{
+        color:colors.$text-color-primary-light;
+        font-size:type.$font-size-7xl;
+        line-height: type.$line-height-lg;
+        margin:15px auto;
+    }
+    p {
+        font-size:type.$font-size-xl;
+        color: colors.$text-color-secondary-light;
+        margin: 5px 20px;
+    }
+}
+
+
+@media(max-width:992px){
+    .hero
+    >div {
+        padding: 0px;
+    }
+    h1 {
+        font-size:type.$font-size-2xl!important;
+        line-height: type.$line-height-2xs!important;
+        text-align:center;
+    }
+    p {
+        font-size:type.$font-size-md;
+        color: colors.$text-color-secondary-light;
+        margin:0px;
+        text-align:center;
+    }
+}

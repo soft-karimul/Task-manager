@@ -1,0 +1,37 @@
+<div class="container">
+  
+    <div class="left">
+      <img src="https://images.unsplash.com/photo-1721332153289-0c46dc38981b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </div>
+    <div class="right">
+      <div class="task-header">
+        <h1 class="title"><i class="bx bx-task"></i> {{ task.title }}</h1>
+        <p class="desc">
+          <i class="bx bx-message-square-detail"></i>{{ task.description }}
+        </p>
+      </div>
+   
+      <div class="task-body">
+        <div class="content">
+          <div class="row">
+            <span> <label> Start date :</label> {{ task.start_date | date:'medium' }}</span>
+            <span> <label> End date :</label> {{ task.end_date | date:'medium' }}</span>
+          </div>
+          <div class="row">
+            <span> <label> Remainder :</label> {{ task.remainder }}</span>
+            <span> <label>Priority :</label> {{ task.priority }}</span>
+          </div>
+          <div class="row" style="margin-top:10px;">
+            <span><label >Status: </label> <span class="status" [class]="task.status == 'pending' ? 'pending' : 'dued'">{{ task.status }}</span></span>
+          </div>
+        </div>
+        <div class="btn-cont">
+          <div class="row">
+            <button [disabled]="task.status=='completed'" style="flex-shrink: 0;" (click)="start_task()" class="start-btn"> @if(task.status=='completed'){ <span>Done</span> }@else {  <span>start task :</span> } : @if(this.timer_state){ <i  class=' bx bx-pause-circle'></i>}@else { <i  class=' bx bx-play-circle'></i>}</button>
+            <span>Time : {{startTime[0].h}} : {{startTime[0].m}} : {{startTime[0].s}} / {{this.totalTime[0].h}} : {{this.totalTime[0].m}} : {{this.totalTime[0].s}}</span>
+          </div>
+        </div>
+     
+      </div>
+    </div>
+</div>

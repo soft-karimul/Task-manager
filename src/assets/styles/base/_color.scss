@@ -1,0 +1,155 @@
+:root {
+    --white-50:#ffffff;
+    --white-100:#E3E3E3;
+    --white-200:#C6C6C6;
+    --white-300:#AAAAAA;
+    --white-400:#8E8E8E; 
+    --white-500:#717171;
+    --white-600:#555555;
+    --white-700:#393939;
+    --white-800:#1c1c1c;
+  
+
+    --black-50:hsl(0,0,0);
+    --black-100:hsl(0,0,11);
+    --black-200:hsl(0,0,22);
+    --black-300:hsl(0,0,33);
+    --black-400:hsl(0,0,44);
+    --black-500:hsl(0,0,55);
+    --black-600:hsl(0,0,66);
+    --black-700:hsl(0,0,77);
+    --black-800:hsl(0,0,88);
+    --black-900:hsl(0,0,99);
+
+    --blue-50:#E6FAF9;
+    --blue-100:#D9F8F6;
+    --blue-200:#B0F1EC;
+    --blue-300:#00D1C3;
+    --blue-400:#00BCB0;
+    --blue-500:#00A79C;
+    --blue-600:#009D92;
+    --blue-700:#007D75;
+    --blue-800:#005E58;
+    --blue-900:#004944;
+
+    --purple-50:#F7E9FE;
+    --purple-100:#F4DEFE;
+    --purple-200:#E7BBFC;
+    --purple-300:#B324F5;
+    --purple-400:#A120DD;
+    --purple-500:#8F1DC4;
+    --purple-600:#861BB8;
+    --purple-700:#6B1693;
+    --purple-800:#51106E;
+    --purple-900:#3F0D56;
+
+    --orange-50:#FEF5E6;
+    --orange-100:#FEF0D9;
+    --orange-200:#FCE0B0;
+    --orange-300:#F59B00;
+    --orange-400:#DD8C00;
+    --orange-500:#C47C00;
+    --orange-600:#B87400;
+    --orange-700:#935D00;
+    --orange-800:#6E4600;
+    --orange-900:#563600;
+
+    --red-50:#FFEDED;
+    --red-100:#FFE4E4;
+    --red-200:#FEC7C7;
+    --red-300:#FD4949;
+    --red-400:#E44242;
+    --red-500:#CA3A3A;
+    --red-600:#BE3737;
+    --red-700:#982C2C;
+    --red-800:#722121;
+    --red-900:#591A1A;
+
+    --green-50:#E6FBF4;
+    --green-100:#D9F9EE;
+    --green-200:#B0F2DC;
+    --green-300:#00D68F;
+    --green-400:#00C181;
+    --green-500:#00AB72;
+    --green-600:#00A16B;
+    --green-700:#008056;
+    --green-800:#006040;
+    --green-900:#004B32;
+    
+}
+
+
+
+
+
+//bg color variables =================================>
+$bg-primary-light:var(--blue-400);
+$bg-secondary-ligth:var(--blue-300);
+$bg-tertiary-light:var(--blue-200);
+
+$bg-primary-dark:var(--black-50);
+$bg-secondary-dark:var(--black-100);
+$bg-tertiary-dark:var(--black-200);
+
+$bg-neutral-primary-light:var(--white-50);
+$bg-neutral-secondary-light:var(--white-100);
+
+$bg-neutral-primary-dark:var(--black-100);
+$bg-neutral-secondary-dark:var(--black-500);
+
+//brand colors variable ======================>>>>>>
+$brand-primary:var(--purple-200);
+$brand-secondary:var(--purple-600);
+
+
+
+
+
+
+
+
+
+
+
+
+//text color ============================================>
+$text-color-primary-light:var(--black-200);
+$text-color-secondary-light:var(--black-400);
+$text-color-tertiary-light:var(--black-100);
+
+$text-color-primary-dark:var(--white-100);
+$text-color-secondary-dark:var(--white-200);
+$text-color-tertiary-dark:var(--white-300);
+
+
+//brand color =======================================>
+$brand-primary:var(--purple-300);
+$brand-secondary:var(--purple-200);
+$brand-tertiary:var(--purple-100);
+
+//input colors ========================================>
+$input-subface-light:var(--white-100);
+$input-surface-dark:var(--black-100);
+$input-border-light:var(--black-300);
+$input-border-dark:var(--black-300);
+
+
+
+
+// Accent colors ======================================>
+$text-danger-primary-light:var(--red-400);
+$text-danger-secondary-light:var(--red-300);
+$text-danger-tertiary-light:var(--red-200);
+
+
+$text-warning-primary-light:var(--orange-300);
+$text-warning-secondary-light:var(--orange-200);
+$text-warning-tertiary-light:var(--orange-100);
+
+$text-success-primary-light:var(--green-400);
+$text-success-secondary-light:var(--green-300);
+$text-success-tertiary-light:var(--green-200);
+
+
+
+

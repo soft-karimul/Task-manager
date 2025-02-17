@@ -1,0 +1,16 @@
+<div class="sidenav" [class.fixed]="this.sideNavService.position() =='overlay'" [style.width]="this.sideNavService.sideNavWidth">
+    <div class="logo-container">
+        <a routerLink="/dashboard" [style.display]="!this.sideNavService.collapse() ? 'block' : 'none' "> <img  class="logo" src="images/main-logo.png"  alt="lgo"></a>
+        @if(this.sideNavService.collapse()){
+          <i (click)="collapseMenu()" class='bx bx-chevrons-right'></i>
+        }@else {
+          <i (click)="collapseMenu()" class='bx bx-chevrons-left'></i>
+        }
+      </div>
+
+      <ul>
+        @for (item of items; track $index;let id = $index) {
+            <li  [routerLink]="item.routerLink ?  item.routerLink : null"    [class]="item.label == 'logout' ? 'logout-btn' : ''" (click)="checkIsActive(id)" ><a [class]="item.isActive ?  'active' :''" ><i  class={{item.icon}}></i><span [style.display]="this.sideNavService.collapse() ? 'none' : 'block'">{{item.label}}</span></a></li>
+        }
+      </ul>
+</div>

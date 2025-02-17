@@ -1,0 +1,78 @@
+@use '../../../../assets/styles/base/color' as colors;
+@use '../../../../assets/styles/base/typography' as type;
+
+.sidenav{
+     width:fit-content;
+     background-color:colors.$bg-primary-light;
+    height: 100vh;
+    float: left;
+    transition: .3s ease-in-out;
+    overflow: hidden;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    position: relative;
+}
+.logo-container {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+        font-size:30px;
+        cursor: pointer;
+    }
+    img{
+        margin:10px 30px;
+        width: 80px;
+    }
+}
+
+ul {
+    li{
+        display:flex;
+        justify-content:flex-start;
+        flex-direction: column;
+        padding: 10px 0px;
+        cursor: pointer;
+        a{
+            text-decoration: none;
+             cursor: pointer;
+             text-transform: capitalize;
+             font-size: type.$font-size-sm;
+             display: flex;
+             align-items: center;
+             justify-content:center;
+             column-gap: 10px;
+             padding: 10px 0px;
+             overflow: hidden;
+             margin:0px 10px;
+             border-radius: 5px;
+             font-weight:type.$font-weight-medium;
+             color: colors.$text-color-tertiary-light;
+        }
+        a.active{
+            background-color: colors.$bg-tertiary-light;
+
+        }
+    }
+}
+.logout-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: colors.$text-danger-secondary-light;
+    width:80%;
+    border-radius: 5px;
+    height:50px;
+}
+.fixed {
+    position:sticky;
+    top:0px;
+    left: 0px;
+    z-index: 100;
+}
+
+

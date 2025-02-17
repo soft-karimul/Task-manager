@@ -1,0 +1,31 @@
+<app-nav></app-nav>
+<div class="signup-cont">
+    <form [formGroup]="signupForm" (ngSubmit)="onSave()">
+      <div class="signup">
+        <h1>Wellcome</h1>
+        <div class="form-group">
+          <label for="">First name</label>
+          <input formControlName="name" type="text" />
+        </div>
+  
+        <div class="form-group">
+          <label for="">Email</label>
+          <input type="text" formControlName="email" />
+        </div>
+  
+        <div class="form-group">
+          <label for="">password</label>
+          <input type="text" formControlName="password" />
+        </div>
+  
+        <div class="form-group">
+          <input type="submit" />
+        </div>
+        <p>Already have one let's <a routerLink="/login">Signin</a> ?</p>
+      </div>
+     
+    </form>
+   
+  </div>
+  
+  

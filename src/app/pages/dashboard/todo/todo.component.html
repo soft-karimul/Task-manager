@@ -1,0 +1,79 @@
+<div class="search-cont">
+
+    <button (click)="showModal()" class="add-task">
+      <span> Add task</span>
+          <i class="bx bx-message-square-add"></i>
+        
+    </button>
+ 
+  <div class="search-input-cont">
+    <input
+      (input)="getInput($event)"
+      #searchInput
+      (change)="hideOption(searchInput)"
+      (focusin)="showOption()"
+      class="search-input"
+      type="search"
+      placeholder="Search task"
+    />
+    <button class="filter-btn">
+      <i class="bx bx-filter"></i>
+    </button>
+
+    @if(searchState()){
+    <div class="search-option">
+      <ul>
+        @for (item of searchItem; track $index) {
+        <li #li as li (click)="readSearchItem(searchInput, li)">
+          {{ item.title }}
+        </li>
+        }
+      </ul>
+    </div>
+    }
+  </div>
+</div>
+
+<ng-container class="modal-container" #container> </ng-container>
+
+<!-- show all task here-->
+
+<div class="task-list-cont">
+  <div class="task-header">
+    <h3>All task</h3>
+    <div>
+      <label for="">Action</label>
+      <select (change)="taskAction($event)"  class="status" name="" id="">
+        <option value="">Action</option>
+        <option value="edit">Edit</option>
+        <option value="delete">Delete</option>
+      </select>
+    </div>
+  </div>
+
+  <ul>
+    @for (item of allTask; track $index) {
+      <a (click)="seeTaskDetails(item.id,$event)">
+        <li>
+          <div>
+            <i #checkIcon class="bx bx-checkbox"></i>
+            <p class="title">{{ item.title }}</p>
+            <p
+              class="status"
+              [class]="item.status == 'pending' ? 'pending' : 'dued'"
+            >
+              {{ item.status }}
+            </p>
+          </div>
+    
+          @if(true){
+          <div class="more-details">
+            <span>Start time : {{ item.start_date | date:'medium'}}</span>
+            <span>End time : {{item.end_date | date:'medium'}}</span>
+          </div>
+          }
+        </li>
+      </a>
+    }
+  </ul>
+</div>

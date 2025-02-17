@@ -1,0 +1,97 @@
+@use '../../../../assets/styles/base/color' as colors;
+@use '../../../../assets/styles/base/typography' as types;
+
+.main-content{
+    width: calc(100% - 250px);
+    height:100vh;
+    float: left;
+    padding:0px;
+    transition: .3s ease-in-out;
+    overflow-x: scroll;
+    position: relative;
+}
+.main-content.max {
+    width: calc(100% - 200px);
+}
+.main-content.min {
+    width: calc(100% - 50px);
+}
+header {
+background-color:colors.$bg-tertiary-light;
+padding: 10px;
+border-radius: 5px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
+}
+section {
+    padding: 0px 10px;
+}
+
+.avatar,.avatar-mini {
+width:30px;
+height:30px;
+background-color:colors.$bg-neutral-primary-light;
+object-fit: contain;
+overflow: hidden;
+border-radius: 50%;
+text-align: center;
+box-shadow: 2px 4px 8px colors.$bg-neutral-primary-dark;
+outline: 2px solid white;
+cursor: pointer;
+}
+.avatar:hover {
+    outline: 1px solid white;
+}
+.avatar img {
+    padding:2px;
+}
+.profile {
+    position: absolute;
+    top:60px;
+    right:5px;
+    width:fit-content;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    z-index:1000;
+    background-color: colors.$bg-neutral-primary-light;
+     > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .user-details {
+        margin: 5px 10px;
+    }
+
+    ul {
+        list-style: none;
+        margin-top: 20px;
+    }
+    ul li {
+        padding:12px;
+        border-radius: 5px;
+        margin: 4px auto;
+        cursor: pointer;
+        text-align: left;
+    }
+    ul li:hover {
+        background-color: colors.$bg-tertiary-light;
+    }
+    ul li a {
+        text-decoration: none;
+    }
+}
+
+@media (max-width:765px){
+
+    section {
+        padding: 0px 5px;
+    }
+
+}
+
+
