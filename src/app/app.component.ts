@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './features/home/home.component';
 import { FormsModule } from '@angular/forms'; 
 import { of,map,fromEvent } from 'rxjs';
 import { ajax } from 'rxjs/ajax';

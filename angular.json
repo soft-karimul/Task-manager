@@ -29,17 +29,14 @@
               {
                 "glob": "**/*",
                 "input": "public"
-
               }
             ],
             "styles": [
-               "src/styles.scss",
-               "src/assets/styles/style.scss",
-               "node_modules/ngx-toastr/toastr.css"
+              "src/styles.scss",
+              "src/assets/styles/style.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": [
-             
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -97,18 +94,14 @@
               {
                 "glob": "**/*",
                 "input": "src/assets/",
-                 "output": "/assets/"
+                "output": "/assets/"
               }
             ],
             "styles": [
               "src/styles.scss",
-               "src/assets/styles/style.scss"
-
-               
+              "src/assets/styles/style.scss"
             ],
-            "scripts": [
-            
-            ]
+            "scripts": []
           }
         }
       }

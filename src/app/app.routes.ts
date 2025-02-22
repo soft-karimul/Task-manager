@@ -1,16 +1,16 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { HeroComponent } from './pages/home/hero/hero.component';
-import { LoginComponent } from './pages/auth-pages/login/login.component';
-import { SignupComponent } from './pages/auth-pages/signup/signup.component';
-import { DashboardComponent } from './pages/dashboard/dashboard/dashboard.component';
-import { LeftSidebarComponent } from './pages/dashboard/left-sidebar/left-sidebar.component';
-import { MainContentComponent } from './pages/dashboard/main-content/main-content.component';
-import { TodoComponent } from './pages/dashboard/todo/todo.component';
-import { OverviewComponent } from './pages/dashboard/overview/overview.component';
+import { HomeComponent } from './features/home/home.component';
+import { HeroComponent } from './features/home/hero/hero.component';
+import { LoginComponent } from './features/auth/login/login.component';
+import { SignupComponent } from './features/auth/signup/signup.component';
+import { DashboardComponent } from './features/dashboard/dashboard/dashboard.component';
+import { LeftSidebarComponent } from './features/dashboard/left-sidebar/left-sidebar.component';
+import { MainContentComponent } from './features/dashboard/main-content/main-content.component';
+import { TodoComponent } from './features/dashboard/todo/todo.component';
+import { OverviewComponent } from './features/dashboard/overview/overview.component';
 import { authGuard } from './core/gurards/auth-gurard';
-import { TaskDetailsComponent } from './pages/dashboard/task-details/task-details.component';
-import { TasksComponent } from './pages/dashboard/tasks/tasks.component';
+import { TaskDetailsComponent } from './features/dashboard/task-details/task-details.component';
+import { TasksComponent } from './features/dashboard/tasks/tasks.component';
 
 export const routes: Routes = [
   {

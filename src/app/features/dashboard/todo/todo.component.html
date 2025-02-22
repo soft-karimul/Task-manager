@@ -1,0 +1,84 @@
+<div class="search-cont">
+    <button (click)="showModal()" class="add-task">
+      <span> Add task</span>
+          <i class="bx bx-message-square-add"></i>
+    </button>
+ 
+  <div class="search-input-cont">
+    <input
+      (input)="getInput($event)"
+      #searchInput
+      (change)="hideOption(searchInput)"
+      (focusin)="showOption()"
+      class="search-input"
+      type="search"
+      placeholder="Search task" 
+      [value]="allTask.length==0 ? 'There is no task to search for' : 'Search task'" 
+      [disabled]="allTask.length==0" 
+    />
+    <button class="filter-btn">
+      <i class="bx bx-filter"></i>
+    </button>
+    @if(searchState()){
+    <div class="search-option">
+      <ul>
+        @for (item of searchItem; track $index) {
+        <li #li as li (click)="readSearchItem(searchInput, li)">
+          {{ item.title }}
+        </li>
+        }
+      </ul>
+    </div>
+    }
+  </div>
+</div>
+
+<ng-container class="modal-container" #container> </ng-container>
+
+<!-- show all task here-->
+
+<div class="task-list-cont">
+  <div class="task-header">
+    <h3>All task</h3>
+    <div>
+      <label for="">Action</label>
+      <select [disabled]="allTask.length==0" (change)="taskAction($event)"  class="status" name="" id="">
+        <option value="">Action</option>
+        <option value="edit">Edit</option>
+        <option value="delete">Delete</option>
+      </select>
+    </div>
+  </div>
+
+  <ul>
+    @for (item of allTask; track $index) {
+      <a (click)="seeTaskDetails(item.id,$event)">
+        <li>
+          <div>
+            <i #checkIcon class="bx bx-checkbox"></i>
+            <p class="title">{{ item.title }}</p>
+            <p
+              class="status"
+              [class]="item.status == 'pending' ? 'pending' : 'dued'"
+            >
+              {{ item.status }}
+            </p>
+          </div>
+    
+          @if(true){
+          <div class="more-details">
+            <span>Start time : {{ item.start_date | date}}</span>
+            <span>End time : {{item.end_date | date}}</span>
+          </div>
+          }
+        </li>
+      </a>
+    }
+    @if(allTask.length == 0){
+    <li class="no-task-cont">
+      <span class="no-task">No task available    <a (click)="showModal()" style="font-size: 12px;color:#03abd4;margin:0px 5px;">create new task</a></span>
+   
+    </li>
+    }
+  </ul>
+</div>

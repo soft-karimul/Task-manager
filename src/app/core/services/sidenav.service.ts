@@ -12,15 +12,14 @@ export class SidenavService {
   position: WritableSignal<string> = signal('default');
   toggle() {
     this.collapse.set(!this.collapse());
-    if(window.innerWidth < 768){
+    if (window.innerWidth < 768) {
       this.position.set('overlay');
-    }else {
+    } else {
       this.position.set('default');
     }
   }
+  getWindowWidth() {
 
-  getWindowWidth(){
-    
   }
 
   get sideNavWidth() {

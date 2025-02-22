@@ -20,7 +20,6 @@ export class AuthService {
   private route = inject(Router);
   private notification = inject(NotificationsService);
   constructor() {
-    console.log(this.auth);
   }
 
   //New user registration ====================>
@@ -59,7 +58,7 @@ export class AuthService {
           'Login user'
         );
         setTimeout(() => {
-          this.route.navigate(['dashboard/overview']);
+          this.route.navigate(['dashboard']);
         }, 2000);
       })
       .catch((error) => {
