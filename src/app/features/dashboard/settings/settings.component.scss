@@ -1,0 +1,148 @@
+@use '../../../../assets/styles/base/typography' as typo;
+@use '../../../../assets/styles/base/color' as colors;
+
+
+
+.setting-cont {
+    width: 100%;
+    height: 500px;
+    padding: 25px 15px;
+}
+.setting-header {
+    width: 100%;
+    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 5px;
+}
+.setting-header h3 {
+    font-size: typo.$font-size-sm;
+    font-weight: typo.$font-weight-medium;
+    color: colors.$text-color-primary-light;
+}
+.setting-body {
+  width:100%;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin-top: 20px;
+  border-radius:3px;
+  display:grid;
+  grid-template-columns: 2fr 5fr;
+}
+.setting-body .nav-item {
+    padding: 10px;
+    ul {
+        list-style: none;
+        li {
+            background-color: colors.$bg-neutral-secondary-light;
+            padding: 6px 10px;
+            border-radius: 3px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            &:hover {
+                background-color: colors.$bg-neutral-secondary-dark;
+                border: 1px solid colors.$bg-neutral-secondary-light;
+            }
+            a{
+                text-decoration: none;
+                color: colors.$text-color-primary-light;
+                text-transform: capitalize;
+                font-size: typo.$font-size-xs;
+                font-weight: typo.$font-weight-regular;
+            }
+        }
+    }
+}
+.setting-body .nav-content {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    span {
+        margin: 10px auto;
+    }
+}
+.setting-body .nav-content .profile-cont {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    align-content: center;
+    column-gap:20px;
+}
+.setting-body .nav-content .profile-cont img {
+    align-self: flex-start;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+.setting-body .nav-content .profile-cont button {
+    justify-self: center;
+    height:26px;
+    margin: 10px auto;
+    padding:0px 10px;
+    border: none;
+    border-radius:4px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.setting-body .nav-content .profile-cont button:nth-child(2){
+  color: colors.$text-color-primary-dark;
+  background-color: colors.$brand-primary;
+}
+.setting-body .nav-content .profile-cont button:nth-child(3){
+    color: colors.$text-danger-primary-light;
+  }
+
+  .profile-details .profile-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 15px auto;;
+  }
+  .profile-details .profile-item label {
+    font-size: typo.$font-size-xs;
+    font-weight: typo.$font-weight-light;
+    color: colors.$text-color-primary-light;
+    text-transform: capitalize;
+  }
+  .profile-details .profile-item input {
+    padding: 8px;
+    margin: 5px 0px;
+    width: 100%;
+    border: 1px solid colors.$bg-neutral-secondary-light;
+    border-radius: 5px;
+    outline: none;
+    background-color: colors.$bg-neutral-primary-light;
+    color: colors.$text-color-primary-light;
+    font-size: typo.$font-size-xs;
+    font-weight: typo.$font-weight-regular;
+    text-transform: capitalize;
+  }
+  .profile-details .profile-item input {
+    padding: 8px;
+    margin: 5px 0px;
+    width: 100%;
+    border: 1px solid colors.$bg-neutral-secondary-light;
+    border-radius: 5px;
+    outline: none;
+    background-color: colors.$bg-neutral-primary-light;
+    color: colors.$text-color-primary-light;
+    font-size: typo.$font-size-xs;
+    font-weight: typo.$font-weight-regular;
+    text-transform: capitalize;
+  }
+
+  .profile-details .profile-item button {
+    margin: 5px 0px;
+    width: 100%;
+    background-color: colors.$bg-primary-light;
+    border-radius: 5px;
+    outline: none;
+    border:none;
+    color: colors.$text-color-primary-light;
+    font-size: typo.$font-size-xs;
+    font-weight: typo.$font-weight-regular;
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 12px;
+  }

@@ -11,6 +11,7 @@ import { OverviewComponent } from './features/dashboard/overview/overview.compon
 import { authGuard } from './core/gurards/auth-gurard';
 import { TaskDetailsComponent } from './features/dashboard/task-details/task-details.component';
 import { TasksComponent } from './features/dashboard/tasks/tasks.component';
+import { SettingsComponent } from './features/dashboard/settings/settings.component';
 
 export const routes: Routes = [
   {
@@ -50,6 +51,11 @@ export const routes: Routes = [
       {
         path:'tasks',
         component:TasksComponent
+      },
+      {
+        path:'settings',
+        component:SettingsComponent
+
       }
     ],
   },
