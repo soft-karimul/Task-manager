@@ -12,6 +12,9 @@ import { authGuard } from './core/gurards/auth-gurard';
 import { TaskDetailsComponent } from './features/dashboard/task-details/task-details.component';
 import { TasksComponent } from './features/dashboard/tasks/tasks.component';
 import { SettingsComponent } from './features/dashboard/settings/settings.component';
+import { ProfileComponent } from './features/dashboard/settings/profile/profile.component';
+import { AppearanceComponent } from './features/dashboard/settings/appearance/appearance.component';
+import { NotificationComponent } from './features/dashboard/settings/notification/notification.component';
 
 export const routes: Routes = [
   {
@@ -54,7 +57,20 @@ export const routes: Routes = [
       },
       {
         path:'settings',
-        component:SettingsComponent
+        component:SettingsComponent,
+        children: [
+          {
+            path:'',
+            component:ProfileComponent
+          },{
+            path:'appearance',
+            component:AppearanceComponent
+          },
+          {
+            path:'notification',
+            component:NotificationComponent
+          }
+        ]
 
       }
     ],

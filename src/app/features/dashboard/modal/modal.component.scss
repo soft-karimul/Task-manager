@@ -8,7 +8,7 @@
 .modal-container {
     width: 40vw;
     height: fit-content;
-    background-color: colors.$bg-secondary-ligth;
+    background-color:var(--bg-secondary);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -26,21 +26,21 @@
 
     i {
         cursor: pointer;
-        font-size: types.$font-size-md;
+        font-size: var(--font-size-md);
         border-radius: 5px;
         padding: 5px;
         transition: .3s;
-        color: colors.$text-color-primary-light;
+        color: var(--text-primary);
     }
 
     i:hover {
-        background-color: colors.$bg-neutral-secondary-light;
+        background-color: var(--bg-secondary);
     }
 
     h3 {
         margin-bottom: 8px;
         color: rgba(0, 0, 0, 0.2);
-        font-size: types.$font-size-md;
+        font-size:var(--font-size-md);
     }
 }
 
@@ -66,9 +66,9 @@ textarea {
     padding: 10px;
     letter-spacing: 1px;
     font-family: "Roboto Slab", serif;
-    font-size: types.$font-size-sm;
-    font-weight: types.$font-weight-medium;
-    color: colors.$text-color-tertiary-dark;
+    font-size:var(--font-size-sm);
+    font-weight: var(font-weight-medium);
+    color: var(--text-tertiary);
 }
 
 .footer {
@@ -88,15 +88,15 @@ textarea {
 }
 
 .select-group select {
-    border: 1px solid colors.$bg-neutral-secondary-dark;
+    border: 1px solid var(--bg-neutral-secondary);
     outline: none;
     border-radius: 3px;
     padding: 9px 10px;
     letter-spacing: 1px;
     font-family: "Roboto Slab", serif;
-    font-size: types.$font-size-sm;
-    font-weight: types.$font-weight-medium;
-    color: colors.$text-color-tertiary-dark;
+    font-size: var(--font-size-sm);
+    font-weight:var(--font-weight-medium);
+    color: var(--text-tertiary);
     position: relative;
 }
 
@@ -107,27 +107,27 @@ textarea {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: types.$font-size-sm;
-    border: 1px solid colors.$brand-primary;
+    font-size: var(--font-size-sm);
+    border: 1px solid var(--brand-primary);
 }
 
 .submit {
-    background-color: colors.$brand-secondary;
+    background-color:var(--brand-secondary);
 }
 
 .btn-outline {
     padding: 5px 10px;
     margin: auto 5px;
-    border: 2px solid colors.$bg-neutral-primary-light;
+    border: 2px solid var(--bg-neutral-secondary);
     border-radius: 5px;
-    font-size: types.$font-size-xs;
+    font-size: var(--font-size-xs);
     cursor: pointer;
 }
 
 .alert {
-    color: colors.$text-danger-primary-light;
-    font-size: types.$font-size-xs;
-    font-weight: types.$font-weight-light;
+    color: var(--text-danger-primary);
+    font-size:var(--font-size-xs);
+    font-weight: var(--font-weight-light);
 }
 
 .select-time,
@@ -148,8 +148,8 @@ textarea {
 }
 
 label {
-    font-size: types.$font-size-xs;
-    color: colors.$text-warning-secondary-light;
+    font-size:var(--font-size-xs);
+    color: var(--text-warning-secondary);
 }
 
 .select-date input,

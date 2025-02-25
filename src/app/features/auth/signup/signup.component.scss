@@ -4,7 +4,7 @@
 .signup-cont {
     width: 100%;
     height:auto;
-    background-color:colors.$bg-neutral-primary-dark;
+    background-color:var(--bg-primary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,37 +12,40 @@
     .signup {
         width: 25vw;
         height:auto;
-        background-color: colors.$bg-primary-light;
+        background-color:var(--bg-secondary);
         border-radius: 5px;
         padding:50px 15px;
         margin: 15% auto;
         h1{
             text-align: center;
             margin:20px auto;
+            color: var(--text-primary);
         }
         .form-group{
             width:100%;
             margin:10px auto;
           
             label {
-                color: colors.$text-color-primary-light;
+                color: var(--text-primary);
                 display:block;
             }
             input {
-                background-color: colors.$input-subface-light;
-                border: 1px solid colors.$input-border-light;
+                background-color:var(--bg-primary);
+                border: 1px solid var(--bg-neutral-secondary);
                 padding:15px 10px;
                 width: 100%;
                 margin: 5px auto;
                 border-radius: 5px;
-                font-size:type.$font-size-default;
-                font-weight: type.$font-weight-medium;
-                 color: colors.$text-color-tertiary-dark;
+                font-size:var(--font-size-default);
+                font-weight:var(--font-weight-medium);
+                 color:var(--text-tertiary);
             }
             input[type=submit] {
                 margin: 15px auto;
-                font-weight: type.$font-weight-semibold;
+                font-weight: var(--font-weight-semibold);
                 cursor: pointer;
+                background-color: var(--brand-primary);
+                color: var(--text-primary);
             }
             input:focus {
                 outline: none;

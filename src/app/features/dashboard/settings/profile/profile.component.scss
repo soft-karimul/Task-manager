@@ -1,0 +1,113 @@
+@use '../../../../../assets/styles/base/typography' as typo;
+@use '../../../../../assets/styles/base/color' as colors;
+
+
+span {
+    color: var(--text-secondary);
+    margin-bottom:4px;
+    display: block;
+    font-size: var(--font-size-xs);
+}
+
+.profile-cont {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    align-items: center;
+    column-gap: 20px;
+    background-color: var(--bg-secondary);
+    padding:10px;
+}
+
+.profile-cont img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.profile-cont button {
+    height: auto;
+    margin: 10px auto;
+    padding: 10px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.profile-cont button:nth-child(2) {
+    color:var(--text-primary);
+    background-color:var(--bg-tertiary);
+}
+
+.profile-cont button:nth-child(3) {
+    color:var(--text-danger-secondary);
+    background-color:initial;
+    border: 1px solid var(--bg-tertiary);
+}
+
+.profile-details {
+    width: 100%;
+    height: auto;
+}
+
+.profile-details .profile-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 15px auto;
+}
+
+.profile-details .profile-item label {
+    font-size: var(--font-size-xs);
+    font-weight:var(--font-weight-light);
+    color:var(--text-primary);
+    text-transform: capitalize;
+}
+
+
+
+.profile-details .profile-item input {
+    padding:10px 8px;
+    margin: 5px 0px;
+    width: 100%;
+    border: 1px solid var(--bg-neutral-secondary);
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--bg-secondary);
+    color:var(--text-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-regular);
+    text-transform: capitalize;
+}
+
+.profile-details .profile-item button {
+    margin: 5px 0px;
+    width: 100%;
+    background-color:var(--bg-tertiary);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color:var(--text-primary);
+    font-size:var(--font-size-xs);
+    font-weight:var(--font-weight-regular);
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 12px;
+}
+
+@media (max-width:768px) {
+    .nav-item ul {
+        display: flex;
+    }
+    .nav-item ul li {
+        text-align: center;
+    }
+    .nav-item ul li a {
+        display: none;
+    }
+    .profile-cont {
+        column-gap: 5px;
+    }
+}

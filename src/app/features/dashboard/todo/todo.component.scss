@@ -10,7 +10,8 @@
     column-gap:30px;
     align-items: center;  
     border:none;
-    margin: 10px 5px;
+    margin: 10px 0px;
+    background-color: var(--bg-secondary);
 }
 .search-input-cont {
     flex-grow: 2;
@@ -19,6 +20,7 @@
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     border-radius: 5px;
     position: relative;
+    background-color:var(--bg-primary);
 }
 .search-option {
     position: absolute;
@@ -26,7 +28,7 @@
     height:fit-content;
     top: 50px;
     border-radius: 5px;
-    background-color:white;
+    background-color:var(--bg-secondary);
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     ul {
         list-style: none;
@@ -34,10 +36,12 @@
             padding: 10px 12px;
             text-transform: lowercase;
             cursor: pointer;
-            font-size: typo.$font-size-sm;
+            font-size: var(--font-size-sm);
+            color: var(--text-primary);
         }
         li:hover {
-            background-color: colors.$bg-neutral-primary-light;
+            background-color: var(--bg-primary);
+
         }
     }
 }
@@ -47,24 +51,28 @@
     padding: 10px 20px;
     outline: none;
     border-radius: 5px;
+    background-color: var(--bg-secondary);
     border:none;
     font-family: "Roboto Slab", serif;
-    font-weight: typo.$font-weight-medium;
+    font-weight:var(--font-weight-medium);
+    color: var(--text-primary);
 }
 .filter-btn {
-    border: 1px solid #ccc;
+    border: none;
     padding:8px 15px;
+    background-color: var(--bg-secondary);
     cursor: pointer;
     i {
-        font-size: typo.$font-size-xl;
+        font-size:var(--font-size-xl);
+        color: var(--text-primary);
     }
 }
 
 .add-task {
     width:120px;
     padding: 10px 10px;
-    background-color:colors.$brand-primary;
-    color: colors.$text-color-primary-dark;
+    background-color:var(--brand-primary);
+    color: var(--text-primary);
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -72,7 +80,7 @@
     justify-content:center;
     align-items: center;
     column-gap: 5px;
-    font-weight: typo.$font-weight-semibold;
+    font-weight: var(--font-weight-semibold);
      flex-grow: 0;
      margin: auto 5px;
 }
@@ -94,23 +102,23 @@
         padding: 5px auto;
         div{
             label {
-                color: colors.$text-color-tertiary-light;
-                font-weight: typo.$font-weight-light;
-                font-size: typo.$font-size-xs;
-                margin:0px 5px;
+                color: var(--text-tertiary);
+                font-weight:var(--font-weight-light);
+                font-size: var(--font-size-xs);
+                margin:0px 8px;
             }
             select {
                 padding: 8px;
                 margin: 5 10px;
                 appearance:none;
-                border:1px solid colors.$brand-secondary;
+                border:1px solid var(--brand-primary);
                 outline: none;
-                background-color: colors.$bg-neutral-primary-light;
+                background-color: var(--bg-secondary);
                 border-radius: 5px;
                 text-align: center;
-                color: colors.$text-color-tertiary-light!important;
-                font-weight: typo.$font-weight-light;
-                font-size: typo.$font-size-xs;
+                color:var(--text-tertiary);
+                font-weight:var(--font-weight-light);
+                font-size: var(--font-size-xs);
                 text-transform: capitalize;
                 cursor: pointer;
              
@@ -135,7 +143,7 @@
     cursor: pointer;
     list-style: none;
     padding: 10px 20px;
-    box-shadow: 0px 4px 17px #ddd;
+    box-shadow: 0px 4px 17px var(--bg-tertiary);
     flex-direction: column;
     margin: 20px 0;
     display: flex;
@@ -144,7 +152,7 @@
     column-gap: 5px;
     border-radius: 5px;
     .more-details {
-        font-size: typo.$font-size-xs;
+        font-size: var(font-size-xs);
         display:flex;
         align-items: center;
         padding:12px 10px;
@@ -152,8 +160,9 @@
         text-transform: capitalize;
         column-gap: 25px;
         span {
-            color: colors.$text-color-tertiary-light;
-            font-weight: typo.$font-weight-light;
+            color:var(--text-tertiary);
+            font-weight: var(--font-weight-light);
+            font-size: var(--font-size-xs);
         }
     }
     div{
@@ -163,13 +172,13 @@
         padding:5px 10px;
         cursor: pointer;
         .title {
-          font-size: typo.$font-size-xl;
+          font-size: var(--font-size-xl);
         }
         .title::first-letter {
             text-transform: capitalize;
         }
         .status {
-            font-size: typo.$font-size-xs;
+            font-size: var(--font-size-xs);
             display:flex;
             align-items: center;
             padding: 2px 5px;
@@ -177,20 +186,21 @@
             text-transform: capitalize;
         }
         .status.dued {
-            background-color:colors.$text-danger-tertiary-light;
-            border: 1px solid colors.$text-danger-primary-light;
+            background-color:var(--text-danger-tertiary);
+            border: 1px solid var(--text-danger-primary);
             border-radius: 2px;
             padding: 3px 5px;
         }
         .status.pending {
-            background-color: colors.$text-warning-primary-light;
+            background-color:var(--text-warning-primary);
         }
     }
     div i {
         cursor: pointer;
-        font-size:typo.$font-size-3xl;
-        border: 1px solid colors.$brand-secondary;
+        font-size:var(--font-size-3xl);
+        border: 1px solid var(--brand-secondary);
         border-radius: 5px;
+        color: var(--text-primary);
     }
 
 }

@@ -6,10 +6,10 @@
     height: 100%;
 }
 .container h3 {
-    font-size: typo.$font-size-sm;
+    font-size:var(--font-size-sm);
     margin: 10px auto;
-    font-family: typo.$font-weight-light;
-    color: colors.$text-color-secondary-light;
+    font-family: var(--font-weight-light);
+    color:var(--text-secondary);
 }
 .top-section {
     display: grid;
@@ -26,24 +26,24 @@
     background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
 }
 .completed-task div>p {
-    font-size: typo.$font-size-xs;
+    font-size: var(--font-size-xs);
     text-transform: capitalize;
-    font-weight: typo.$font-weight-medium;
+    font-weight:var(--font-weight-medium);
     margin: 5px auto;
 }
 .completed-task span {
-    font-size: typo.$font-size-2xl;
-    font-weight: typo.$font-weight-regular;
-    color: colors.$text-color-tertiary-light;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-regular);
+    color:var(--text-tertiary);
     display: block;
 }
 .completed-task i {
     align-self: flex-start;
-    border: 1px solid colors.$bg-primary-light;
-    font-size: typo.$font-size-5xl;
+    border: 1px solid var(--bg-primary);
+    font-size: var(--font-size-5xl);
     border-radius: 5px;
     padding: 8px;
-    color: colors.$bg-primary-light;
+    color: var(--bg-primary);
 }
 .chart-cont {
     width: 100%;
@@ -52,7 +52,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 8px;
-    // border: 1px solid red;
 }
 .chart-cont-left {
     // border: 1px solid red;
@@ -67,23 +66,23 @@
 }
 .chart-cont .top-header .option {
     label {
-        color: colors.$text-color-primary-light;
-        font-weight: typo.$font-weight-regular;
-        font-size: typo.$font-size-sm;
+        color: var(--text-primary);
+        font-weight: var(--font-weight-regular);
+        font-size:var(--font-size-sm);
         margin: 0px 8px;
     }
     select {
         padding: 8px;
         margin: 5px 8px;
         appearance: none;
-        border: 1px solid colors.$brand-secondary;
+        border: 1px solid var(--brand-secondary);
         outline: none;
-        background-color: colors.$bg-neutral-primary-light;
+        background-color: var(--bg-neutral-primary);
         border-radius: 5px;
         text-align: center;
-        color: colors.$text-color-tertiary-light !important;
-        font-weight: typo.$font-weight-light;
-        font-size: typo.$font-size-xs;
+        color: var(--text-tertiary);
+        font-weight: var(--font-weight-light);
+        font-size: var(--font-size-xs);
         text-transform: capitalize;
         cursor: pointer;
     }

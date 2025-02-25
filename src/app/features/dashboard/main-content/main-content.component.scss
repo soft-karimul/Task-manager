@@ -17,27 +17,26 @@
     width: calc(100% - 50px);
 }
 header {
-background-color:colors.$bg-tertiary-light;
+background-color:var(--bg-secondary);
 padding: 10px;
 border-radius: 5px;
+height: 50px;
 display: flex;
 justify-content: space-between;
 align-items: center;
 position: relative;
 }
-section {
-    padding: 0px 10px;
-}
+
 
 .avatar,.avatar-mini {
 width:30px;
 height:30px;
-background-color:colors.$bg-neutral-primary-light;
+background-color:var(--bg-neutral-primary);
 object-fit: contain;
 overflow: hidden;
 border-radius: 50%;
 text-align: center;
-box-shadow: 2px 4px 8px colors.$bg-neutral-primary-dark;
+box-shadow: 2px 4px 8px var(--bg-tertiary);
 outline: 2px solid white;
 cursor: pointer;
 }
@@ -57,7 +56,7 @@ cursor: pointer;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     z-index:1000;
-    background-color: colors.$bg-neutral-primary-light;
+    background-color:var(--bg-secondary);
      > div{
         display: flex;
         justify-content: space-between;
@@ -65,6 +64,12 @@ cursor: pointer;
     }
     .user-details {
         margin: 5px 10px;
+        h4 {
+            color: var(--text-secondary);
+        }
+        span {
+            color: var(--text-secondary);
+        }
     }
 
     ul {
@@ -79,10 +84,11 @@ cursor: pointer;
         text-align: left;
     }
     ul li:hover {
-        background-color: colors.$bg-tertiary-light;
+        background-color: var(--bg-tertiary);
     }
     ul li a {
         text-decoration: none;
+        color: var(--text-secondary);
     }
 }
 

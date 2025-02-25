@@ -31,9 +31,10 @@ todoServie = inject(TodoService);
   
 
   ngOnInit(){
-     if(localStorage.getItem('User')){
-      this.router.navigate(['/dashboard']);
-     }
+    // document.documentElement.setAttribute('data-bs-theme', 'dark');
+    //  if(localStorage.getItem('User')){
+    //   this.router.navigate(['/dashboard']);
+    //  }
   }
 
  

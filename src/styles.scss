@@ -1,20 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
 
-@use 'assets/styles/base/color' as colors;
 @import 'ngx-toastr/toastr';
-
 
 body {
     font-family: "Roboto Slab", serif;
     padding: 0px;
     margin: 0px;
+    background-color: var(--bg-primary);
 }
 
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    letter-spacing: 1.2px;
 }
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+  
+
+
+
+
+
+
 
 
 

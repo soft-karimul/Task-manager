@@ -1,0 +1,36 @@
+@use '../../../../../assets/styles/base/typography' as typo;
+@use '../../../../../assets/styles/base/color' as colors;
+
+
+.notification-cont {
+    width: 100%;
+    height:auto;
+    height: 200px;
+    margin: 10px auto;
+    padding:20px 0px;
+  }
+  .notification-cont ul {
+    list-style: none;
+  }
+  .notification-cont ul li {
+    width: 100%;
+    background-color: var(--bg-secondary);
+    padding: 12px 10px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: space-between;
+ 
+    span{
+      margin: 0px 5px;
+      font-size: var(--font-size-xs);
+      text-transform: capitalize;
+      color: var(--text-secondary);
+    }
+   i {
+    cursor: pointer;
+    font-size:var(--font-size-2xl);
+   }
+  }

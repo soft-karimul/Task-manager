@@ -7,10 +7,8 @@ footer{
     display:flex;
     justify-content: space-around;
     align-items: center;
-    background-color: colors.$bg-neutral-secondary-light;
-
+    background-color:var(--bg-secondary);
 }
-
 ul {
     list-style: none;
 }
@@ -18,8 +16,12 @@ li{
     display: inline-block;
     margin: auto 8px;
 }
+li a {
+    color: var(--text-primary);
+}
 footer div i {
 margin: auto 8px;
 cursor: pointer;
-font-size:types.$font-size-md;
+color: var(--text-primary);
+font-size:var(--font-size-md);
 }

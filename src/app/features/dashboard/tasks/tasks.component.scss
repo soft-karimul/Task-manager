@@ -17,7 +17,7 @@
 .right {
     padding: 10px;
     border-radius: 5px;
-    background-color:colors.$bg-tertiary-light;
+    background-color:var(--bg-secondary);
 }
 .left {
     display: flex;
@@ -34,28 +34,29 @@ img {
     border-radius: 5px;
 }
 .title,.desc {
-    text-transform: capitalize;
-    font-weight: typos.$font-weight-medium;
+    text-transform: lowercase;
+    font-weight:var(--font-weight-medium);
+    color: var(--text-primary);
 
 }
 .title {
-   font-size: typos.$font-size-xl;
-   color: colors.$text-color-tertiary-light;
+   font-size:var(--font-size-xl);
+   color: var(--text-tertiary);
 }
 .desc {
-    font-size: typos.$font-size-sm;
+    font-size:var(--font-size-sm);
 }
 .title i , .desc i {
-    font-size:typos.$font-size-sm;
+    font-size:var(--font-size-sm);
     margin:6px 10px;
     padding: 2px;
     border-radius: 5px;
-    color:colors.$bg-neutral-primary-dark;
+    color:var(--text-primary);
 }
 .task-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px dashed colors.$bg-secondary-ligth;
+    border: 1px dashed var(--bg-secondary);
     border-radius: 3px;
     margin: 5px auto;
 }
@@ -73,15 +74,15 @@ img {
 
 
 .btn-cont .row span  {
-    font-size: typos.$font-size-sm;
+    font-size:var(--font-size-sm);
 }
 .btn-cont .start-btn,.stop-btn {
-    font-size:typos.$font-size-sm;
+    font-size:var(--font-size-sm);
     margin:6px 10px;
-    background-color: colors.$brand-primary;
+    background-color:var(--brand-primary);
     padding: 5px;
     border-radius: 5px;
-    color:colors.$bg-neutral-primary-light;
+    color:var(--text-primary);
     cursor: pointer;
 }
 
@@ -93,40 +94,37 @@ img {
     align-items: center;
     width: fit-content;
     span {
-        font-weight: typos.$font-weight-regular;
+        font-weight: var(--font-weight-regular);
         text-transform: capitalize;
-        font-size: typos.$font-size-xs;
+        font-size: var(--font-size-xs);
         margin: 5px auto;
         width: 100%;
         display:flex;
         align-items: center;
+        color: var(--text-secondary);
         label {
-            font-weight: typos.$font-weight-regular;
-            font-size: typos.$font-size-sm;
+            font-weight:var(--font-weight-regular);
+            font-size:var(--font-size-sm);
             margin: auto 5px;
         }
       
     }
 }
-
 .status.dued {   
-    background-color:colors.$text-danger-tertiary-light;
-    border: 1px solid colors.$text-danger-primary-light;
+    background-color:var(--text-danger-tertiary);
+    border: 1px solid var(--text-danger-tertiary);
     border-radius: 2px;
     padding: 3px 5px;
 }
 .status.pending {
-    background-color: colors.$text-warning-primary-light;
+    background-color: var(--text-warning-primary);
     border-radius: 2px;
     padding: 3px 5px;
 }
-
-
 // No task content 
 .no-task-cont {
     display: flex;
     justify-content: space-between;
-
     width:100%;
     cursor: pointer;
     list-style: none;

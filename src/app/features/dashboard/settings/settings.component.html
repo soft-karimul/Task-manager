@@ -8,43 +8,14 @@
     <div class="setting-body">
       <div class="nav-item">
         <ul>
-            <li><a href="">profile account</a></li>
-            <li><a href="">appearane</a></li>
-            <li><a href="">notification</a></li>
+            <li routerLink="./" routerLinkActive="active"><i class='bx bxs-user'></i><a >profile account</a></li>
+            <li routerLink="./appearance" routerLinkActive="active"><i class='bx bxs-credit-card-front'></i><a >appearane</a></li>
+            <li routerLink="./notification" routerLinkActive="active"><i class='bx bx-bell'></i><a >notification</a></li>
         </ul>
       </div>
 
       <div class="nav-content">
-        <span>Profile</span>
-        <div class="profile-cont">
-            <img src="https://plus.unsplash.com/premium_photo-1671656349218-5218444643d8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-            <button>change photo</button>
-            <button>delete photo</button>
-        </div>
-        <div class="profile-details">
-          <div class="profile-item">
-            <label for="name">Profile name</label>
-            <input type="text" id="name" placeholder="Name">
-          </div>
-          <div class="profile-item">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Email">
-          </div>
-          <div class="profile-item">
-            <label for="phone">Phone</label>
-            <input type="text" id="phone" placeholder="Phone">
-          </div>
-          <div class="profile-item">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Password">
-          </div>
-          <div class="profile-item">
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" placeholder="Confirm Password">
-          </div>
-          <div class="profile-item">
-            <button>Save</button>
-          </div>
-      </div>
+        <router-outlet></router-outlet>
     </div>
+</div>
 </div>

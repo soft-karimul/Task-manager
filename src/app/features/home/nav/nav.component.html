@@ -1,9 +1,8 @@
-<header>
+<header class="container">
+   
         <div class="logo-cont">
-            <a routerLink="/"> <img width="100" class="logo" src="images/main-logo.png"  alt="lgo"></a>
+            <a routerLink="/"> <img  class="logo" src="images/main-logo.png"  alt="lgo"></a>
         </div>
-       
-        <div class="nav-cont-big">
             <nav class="nav">
                 <ul>
                     <li><a routerLink="/">Home</a></li>
@@ -13,11 +12,18 @@
                     <li><a href="">Contact</a></li>
                 </ul>
             </nav>
-        </div>
-
-    
         <div class="btn-cont">
-            <i (click)="collapseMobileNav()" class='bx bx-menu'></i>
+             <button (click)="toggleTheme()">
+                @if(themeState) {
+                    <i class='bx bxs-toggle-right' ></i>
+                }@else {
+                    <i class='bx bx-toggle-left'></i>
+                }
+                
+               
+             </button>
+             
+            <i class="menu-icon" (click)="collapseMobileNav()" class='bx bx-menu'></i>
         </div>
        
     
